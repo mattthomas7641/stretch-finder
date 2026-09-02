@@ -1,0 +1,638 @@
+/* ============================================================
+   Tokens — athletic performance system. White content areas
+   for legibility, a true-black "stage" for the diagram (a
+   dramatic hero moment, not a flat panel), one vivid
+   red-orange accent shared with the diagram's own color.
+   ============================================================ */
+
+:root {
+  --canvas: #ffffff;
+  --surface-alt: #f2f3f5;
+  --ink: #0a0a0c;
+  --ink-soft: #45464b;
+  --border: rgba(10, 10, 12, 0.12);
+
+  --stage: #0a0a0c;
+  --stage-text: #ffffff;
+  --stage-text-soft: #9a9a9e;
+
+  --accent: #ff3d1a;
+  --accent-text: #c23412;
+  --accent-deep: #b8300f;
+
+  --muscle: #d6472a;
+  --muscle-stroke: #6e2113;
+  --muscle-hover: #ff5a33;
+  --skin: #d7dbe1;
+
+  --shadow-card: 0 1px 2px rgba(10, 10, 12, 0.08), 0 0 0 1px rgba(10, 10, 12, 0.05);
+  --radius-card: 10px;
+
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --dur-fast: 140ms;
+  --dur-base: 200ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-fast: 1ms;
+    --dur-base: 1ms;
+  }
+}
+
+/* ============================================================
+   Base
+   ============================================================ */
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--canvas);
+  color: var(--ink);
+}
+
+body {
+  font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.display {
+  font-family: "Anton", "Arial Narrow", sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+
+.mono {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+}
+
+::selection {
+  background: var(--accent);
+  color: #fff;
+}
+
+a { color: inherit; }
+
+:focus-visible {
+  outline: 3px solid var(--ink);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* ============================================================
+   Top bar
+   ============================================================ */
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 24px;
+  background: var(--stage);
+  flex-wrap: wrap;
+}
+
+.wordmark {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "Anton", "Arial Narrow", sans-serif;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  color: var(--stage-text);
+}
+
+.wordmark::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: var(--accent);
+}
+
+.topbar-stats {
+  display: flex;
+  gap: 20px;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  color: var(--stage-text-soft);
+}
+
+.topbar-stats strong {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* ============================================================
+   Intro strip
+   ============================================================ */
+
+.intro-strip {
+  padding: 56px 24px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.intro-strip h1 {
+  margin: 0 0 14px;
+  font-size: clamp(3rem, 8vw, 6rem);
+  line-height: 0.94;
+  color: var(--ink);
+  max-width: 16ch;
+}
+
+.intro-strip h1 em {
+  font-style: normal;
+  color: var(--accent-text);
+}
+
+.intro-strip .lede {
+  margin: 0 0 24px;
+  max-width: 56ch;
+  font-size: 1.15rem;
+  line-height: 1.5;
+  color: var(--ink-soft);
+}
+
+.stat-row {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 24px;
+}
+
+.stat-row div {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-row .stat-num {
+  font-family: "Anton", "Arial Narrow", sans-serif;
+  font-size: 2.4rem;
+  line-height: 1;
+  color: var(--ink);
+}
+
+.stat-row .stat-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-top: 4px;
+}
+
+.intro-controls-row {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+/* ============================================================
+   View switch — mobile-only tabs (desktop shows both views
+   at once, see .stage below).
+   ============================================================ */
+
+.view-switch {
+  display: none;
+  gap: 24px;
+}
+
+.view-switch input {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  pointer-events: none;
+}
+
+.view-switch label {
+  position: relative;
+  padding-bottom: 6px;
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: var(--ink-soft);
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  transition: color var(--dur-fast) var(--ease-out),
+              border-color var(--dur-fast) var(--ease-out);
+}
+
+.view-switch input:checked + label {
+  color: var(--ink);
+  border-color: var(--accent);
+}
+
+.view-switch input:focus-visible + label {
+  outline: 3px solid var(--ink);
+  outline-offset: 4px;
+  border-radius: 3px;
+}
+
+/* ============================================================
+   Browse-all
+   ============================================================ */
+
+.browse-all summary {
+  cursor: pointer;
+  list-style: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--accent-text);
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 4px 0;
+}
+
+.browse-all summary::-webkit-details-marker { display: none; }
+
+.browse-all summary::after {
+  content: "→";
+  transition: transform var(--dur-base) var(--ease-out);
+}
+
+.browse-all[open] summary::after {
+  transform: rotate(90deg);
+}
+
+.browse-all nav {
+  margin-top: 16px;
+  width: min(100%, 760px);
+}
+
+.browse-all ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 2px 16px;
+}
+
+.browse-all a {
+  display: block;
+  padding: 8px 4px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--ink-soft);
+  text-decoration: none;
+  border-bottom: 1px solid var(--border);
+  transition: color var(--dur-fast) var(--ease-out);
+}
+
+.browse-all a:hover {
+  color: var(--accent-text);
+}
+
+/* ============================================================
+   Diagonal divider — decorative, empty of content, so the
+   angled cut carries zero risk to real text (see build notes).
+   ============================================================ */
+
+.diagonal-divider {
+  height: 56px;
+  background: var(--stage);
+}
+
+/* White above, black below (home page): stay flush with the black
+   section beneath (full-width bottom edge), taper to a point at the
+   top-left so it reads as an intentional cut, not a rendering gap. */
+.diagonal-divider--down {
+  clip-path: polygon(0 100%, 100% 100%, 100% 0);
+}
+
+/* Black above, white below (region page): mirror — flush with the
+   black header above, taper to a point at the bottom-left. */
+.diagonal-divider--up {
+  clip-path: polygon(0 0, 100% 0, 100% 100%);
+}
+
+@media (max-width: 860px) {
+  .diagonal-divider { height: 32px; }
+}
+
+/* ============================================================
+   Stage — the hero visual. Flat black, both views side by side,
+   large. (No glow/gradient — kept it flat on purpose so the
+   diagram itself is the only thing doing visual work here.)
+   ============================================================ */
+
+.stage {
+  position: relative;
+  background: var(--stage);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px 24px 56px;
+}
+
+.diagram-views {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 6vw;
+  width: 100%;
+  max-width: 1040px;
+}
+
+.diagram-view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  min-width: 0;
+  max-width: 400px;
+}
+
+.diagram-view svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  overflow: visible;
+}
+
+.diagram-view .view-label {
+  font-family: "Anton", "Arial Narrow", sans-serif;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 0.14em;
+  color: var(--stage-text-soft);
+  margin-top: 12px;
+}
+
+/* Not rendered — each muscle already draws its own outline; the separate
+   full-body silhouette on top of that was doubling up the linework and
+   reading as visual noise. Kept in the markup (harmless) in case a
+   future direction wants it back. */
+.body-outline {
+  display: none;
+}
+
+.muscle-inert {
+  fill: #3a3b3f;
+  pointer-events: none;
+}
+
+.muscle-link {
+  cursor: pointer;
+}
+
+.muscle-fill {
+  fill: var(--muscle);
+  stroke: var(--muscle-stroke);
+  stroke-width: 1.5;
+  vector-effect: non-scaling-stroke;
+  paint-order: stroke;
+  transition: fill var(--dur-base) var(--ease-out);
+}
+
+/* Invisible, generously-sized tap target independent of the drawn shape —
+   see build_diagram.py's MIN_HIT_DIAMETER. */
+.hit-area {
+  fill: transparent;
+  stroke: none;
+}
+
+.muscle-link:hover .muscle-fill,
+.muscle-link:active .muscle-fill {
+  fill: var(--muscle-hover);
+}
+
+.muscle-link {
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: transform var(--dur-fast) var(--ease-out);
+}
+
+.muscle-link:active {
+  transform: scale(0.94);
+}
+
+.muscle-link:focus-visible {
+  outline: none;
+}
+
+.muscle-link:focus-visible .muscle-fill {
+  stroke: #ffffff;
+  stroke-width: 7;
+}
+
+.tooltip {
+  position: absolute;
+  top: 4px;
+  left: 0;
+  right: 0;
+  min-height: 22px;
+  font-family: "Anton", "Arial Narrow", sans-serif;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+  text-align: center;
+  z-index: 1;
+}
+
+.hint {
+  color: var(--stage-text-soft);
+  font-size: 0.78rem;
+  margin: 18px 0 0;
+}
+
+/* ============================================================
+   Footer / disclaimer
+   ============================================================ */
+
+footer.disclaimer {
+  padding: 24px clamp(24px, 4vw, 56px);
+  color: var(--ink-soft);
+  font-size: 0.8rem;
+  line-height: 1.55;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+footer.disclaimer p { margin: 0 0 8px; }
+footer.disclaimer p:last-child { margin-bottom: 0; }
+footer.disclaimer .credit { font-size: 0.76rem; opacity: 0.75; }
+footer.disclaimer a { color: var(--accent-text); text-decoration: underline; }
+
+/* ============================================================
+   Region page
+   ============================================================ */
+
+.region-head {
+  background: var(--stage);
+  padding: 40px 24px 32px;
+}
+
+.region-head-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.region-head h1 {
+  margin: 0 0 10px;
+  font-size: clamp(2.6rem, 7vw, 4.2rem);
+  line-height: 0.96;
+  color: var(--stage-text);
+}
+
+.region-head .intro {
+  color: var(--stage-text-soft);
+  line-height: 1.55;
+  font-size: 1.02rem;
+  max-width: 68ch;
+  margin: 0;
+}
+
+.region-page {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 28px clamp(20px, 4vw, 40px) 0;
+}
+
+/* Causes: a compact inline tag row, not a column — a short list next to
+   a much taller video column was the exact "dead space" problem this
+   replaces. */
+.causes {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 10px 12px;
+  padding-bottom: 24px;
+  margin-bottom: 28px;
+  border-bottom: 1px solid var(--border);
+}
+
+.causes h2 {
+  margin: 0;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ink-soft);
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  flex-basis: 100%;
+}
+
+.causes ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.causes li {
+  padding: 6px 14px;
+  border: 1.5px solid var(--ink);
+  border-radius: 999px;
+  font-size: 0.86rem;
+  font-weight: 500;
+  color: var(--ink);
+  line-height: 1.3;
+}
+
+.videos h2 {
+  margin: 0 0 4px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent-text);
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+}
+
+.videos .videos-note {
+  margin: 0 0 16px;
+  color: var(--ink-soft);
+  font-size: 0.88rem;
+}
+
+.video-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.video-card {
+  background: var(--canvas);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+}
+
+.video-frame {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  background: var(--surface-alt);
+}
+
+.video-frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.video-meta {
+  padding: 12px 16px 16px;
+}
+
+.video-meta .video-title {
+  font-weight: 600;
+  font-size: 0.92rem;
+  line-height: 1.35;
+}
+
+.video-meta .video-channel {
+  color: var(--ink-soft);
+  font-size: 0.8rem;
+  margin-top: 4px;
+}
+
+footer.disclaimer.region {
+  max-width: 1000px;
+  margin: 40px auto 0;
+  border-top: 1px solid var(--border);
+}
+
+/* ============================================================
+   Responsive
+   ============================================================ */
+
+@media (max-width: 860px) {
+  .view-switch { display: flex; }
+
+  .diagram-views {
+    display: block;
+  }
+
+  .diagram-view:nth-child(2) { display: none; }
+  body:has(#view-back-radio:checked) .diagram-view:nth-child(1) { display: none; }
+  body:has(#view-back-radio:checked) .diagram-view:nth-child(2) { display: block; }
+
+  .diagram-view .view-label { display: none; }
+  .diagram-view { max-width: 420px; margin: 0 auto; }
+
+  .video-list {
+    grid-template-columns: 1fr;
+  }
+
+  .topbar-stats { display: none; }
+  .stat-row { gap: 28px; }
+}
+
+@media (max-width: 480px) {
+  .intro-strip h1 { font-size: 2.6rem; }
+  .browse-all ul { grid-template-columns: 1fr 1fr; }
+}

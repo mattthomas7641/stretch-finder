@@ -1,0 +1,324 @@
+{
+  "regions": [
+    {
+      "id": "neck",
+      "title": "Neck",
+      "intro": "Neck pain is usually tied to posture (especially looking down at phones/laptops), stress-related muscle tension, or sleeping in an awkward position.",
+      "causes": [
+        "\"Tech neck\" from looking down at screens for long periods",
+        "Poor desk/monitor setup or slouched sitting posture",
+        "Sleeping on an unsupportive pillow",
+        "Stress, which tends to concentrate tension in the neck and upper traps"
+      ],
+      "videos": [
+        { "id": "cog4Dds__a0", "title": "10 Best Neck Pain Exercises/Stretches Ever Created", "channel": "Bob & Brad" },
+        { "id": "AaLt_-H5C1o", "title": "The 5 Highest Rated Stretches For Neck Pain, Fast Relief!", "channel": "Tone and Tighten" }
+      ]
+    },
+    {
+      "id": "shoulders",
+      "title": "Shoulders",
+      "intro": "Shoulder pain often comes from overhead activity, poor posture pulling the shoulders forward, or impingement from repetitive motion.",
+      "causes": [
+        "Rounded-shoulder posture from sitting/desk work",
+        "Overuse from throwing, lifting, or overhead sports",
+        "Rotator cuff irritation or impingement",
+        "Sleeping on the same side every night"
+      ],
+      "videos": [
+        { "id": "AMqT-3l0I6k", "title": "5 Exercises For Shoulder Pain Relief (No More Impingement!)", "channel": "Tone and Tighten" },
+        { "id": "FODQxJh5PeI", "title": "Sleeper Shoulder Stretch - Physical Therapy Exercises", "channel": "AskDoctorJo" }
+      ]
+    },
+    {
+      "id": "upper-back",
+      "title": "Upper Back",
+      "intro": "Upper back (thoracic spine) stiffness is extremely common with desk work — it's the area that gets stuck in a hunched position when we sit for hours.",
+      "causes": [
+        "Prolonged sitting and slouching",
+        "Weak mid-back muscles relative to a tight chest",
+        "Carrying a heavy bag on one shoulder",
+        "Limited thoracic spine rotation/extension mobility"
+      ],
+      "videos": [
+        { "id": "86BU0Be0Y24", "title": "3 Simple Stretches Upper to Mid-Back (Thoracic Spine)", "channel": "Bob & Brad" },
+        { "id": "Scq9hboii8I", "title": "Fix Your Upper Back Pain! [Increase Your Thoracic Mobility]", "channel": "Tone and Tighten" }
+      ]
+    },
+    {
+      "id": "lower-back",
+      "title": "Lower Back",
+      "intro": "Lower back pain is one of the most common complaints and is frequently linked to tight hip flexors/hamstrings, weak core muscles, or too much sitting.",
+      "causes": [
+        "Prolonged sitting compressing the lumbar spine",
+        "Tight hip flexors or hamstrings pulling on the pelvis",
+        "Weak core/glute muscles",
+        "Bending or lifting with poor form"
+      ],
+      "videos": [
+        { "id": "U390c5-9fX8", "title": "WORKS FAST! Best Stretches For Low Back Pain - From a Physical Therapist", "channel": "Tone and Tighten" },
+        { "id": "0wAw1-1MHa4", "title": "TEN Best Stretches For Lower Back Pain And Stiffness", "channel": "Bob & Brad" }
+      ]
+    },
+    {
+      "id": "chest",
+      "title": "Chest",
+      "intro": "Tight chest (pec) muscles are the flip side of upper-back stiffness — desk posture shortens the chest while it lengthens and weakens the upper back.",
+      "causes": [
+        "Rounded-shoulder desk posture",
+        "Heavy pressing exercise without balancing pulling exercise",
+        "Shallow breathing / stress"
+      ],
+      "videos": [
+        { "id": "xSdsjliJ5Ns", "title": "Chest Stretch for Tight or Sore Muscles: Pectoralis Major and Minor", "channel": "Bob & Brad" },
+        { "id": "aJ1HZTqUSPA", "title": "Tight Chest Muscles? 5 Exercises to Loosen Your Pecs & Improve Posture", "channel": "Tone and Tighten" }
+      ]
+    },
+    {
+      "id": "hips",
+      "title": "Hips",
+      "intro": "Tight hip flexors are extremely common in people who sit a lot — the hip flexors shorten while sitting and don't get stretched back out.",
+      "causes": [
+        "Prolonged sitting shortening the hip flexors",
+        "Running or cycling without balancing mobility work",
+        "Weak glutes forcing the hip flexors to overwork"
+      ],
+      "videos": [
+        { "id": "RHA3eCUQkQ4", "title": "The Best Hip Flexor Stretch | Taught by a Physical Therapist", "channel": "E3 Rehab" },
+        { "id": "zTPfzlZbtz8", "title": "Best Exercises For Hip Flexor Pain - From a Physical Therapist", "channel": "Tone and Tighten" }
+      ]
+    },
+    {
+      "id": "glutes",
+      "title": "Glutes",
+      "intro": "Glute tightness or weakness is a common contributor to hip and lower back pain, often made worse by long periods of sitting.",
+      "causes": [
+        "Prolonged sitting (\"dead butt syndrome\")",
+        "Piriformis tightness irritating the sciatic nerve",
+        "Overuse from running, squatting, or lifting"
+      ],
+      "videos": [
+        { "id": "6G-bKam5tyk", "title": "Glute Stretches to Release Tension - 5 Exercises (10 Min Physio Guide)", "channel": "Physio Guide" },
+        { "id": "xSuvEdVxcMQ", "title": "3 Glute Stretches (Release Tightness)", "channel": "Tone and Tighten" }
+      ]
+    },
+    {
+      "id": "hamstrings",
+      "title": "Hamstrings (Back of Thigh)",
+      "intro": "Tight hamstrings are common with prolonged sitting and running, and can contribute to lower back discomfort.",
+      "causes": [
+        "Prolonged sitting",
+        "Running or sprinting without adequate warm-up/cool-down",
+        "Previous hamstring strain that healed short and tight"
+      ],
+      "videos": [
+        { "id": "zs2Yf22rei8", "title": "A Physical Therapist's Favorite Hamstring Stretches", "channel": "PT Channel" },
+        { "id": "OpsztYFNuwk", "title": "Fix Your Hamstrings! Stretches & Exercises For Tight, Painful Hamstrings", "channel": "Tone and Tighten" }
+      ]
+    },
+    {
+      "id": "quads",
+      "title": "Quads (Front of Thigh)",
+      "intro": "Tight quads are common after running, cycling, or squatting, and can pull on the kneecap, contributing to knee discomfort.",
+      "causes": [
+        "Running, cycling, or heavy squatting",
+        "Prolonged sitting with hips flexed",
+        "Muscle imbalance relative to the hamstrings"
+      ],
+      "videos": [
+        { "id": "wIlIjGBG46A", "title": "How to Do a Quad Stretch: A Guide from Physical Therapists", "channel": "Hinge Health" },
+        { "id": "p9GeYH1xzIA", "title": "Science Says This Is the BEST Quad Strengthening Exercise", "channel": "Bob & Brad" }
+      ]
+    },
+    {
+      "id": "knees",
+      "title": "Knees",
+      "intro": "Knee pain is often driven by tightness or weakness in the surrounding muscles (quads, hamstrings, calves) rather than the knee joint itself.",
+      "causes": [
+        "Tight quads, hamstrings, or calves pulling on the knee",
+        "Weak quads/glutes causing poor knee tracking",
+        "Overuse from running or jumping sports"
+      ],
+      "videos": [
+        { "id": "4UxUfRb619A", "title": "10 Best Knee Pain Exercises Ever Created (Stretches & Strengthening)", "channel": "Bob & Brad" },
+        { "id": "rsSV_lqbEVo", "title": "BEST Knee Strengthening Exercises for Beginners [Fix Knee Pain]", "channel": "Tone and Tighten" }
+      ]
+    },
+    {
+      "id": "calves",
+      "title": "Calves & Lower Leg",
+      "intro": "Tight calves are common with running, wearing heels, or standing/walking a lot, and can affect ankle mobility.",
+      "causes": [
+        "Running, walking, or standing a lot",
+        "Wearing high heels regularly",
+        "Not stretching after exercise"
+      ],
+      "videos": [
+        { "id": "D327Pwt-ONs", "title": "STOP Calf Pain | Best Stretches For Calves", "channel": "Tone and Tighten" },
+        { "id": "DkCcPR1XYnI", "title": "The Correct Way to Stretch Your Calf | Physical Therapist", "channel": "PT Channel" }
+      ]
+    },
+    {
+      "id": "ankles",
+      "title": "Ankles & Feet",
+      "intro": "Limited ankle mobility can affect squatting, walking, and running mechanics, and often follows an old sprain that never fully rehabbed.",
+      "causes": [
+        "History of ankle sprains",
+        "Tight calves limiting dorsiflexion",
+        "Standing/walking a lot on hard surfaces"
+      ],
+      "videos": [
+        { "id": "Zq3HYp6MCkw", "title": "Improve Ankle Mobility! Exercises To Unlock A Tight, Stiff Ankle", "channel": "Tone and Tighten" },
+        { "id": "AO8-tyuiPaE", "title": "How to Improve Ankle Joint Mobility (4 Directions of Movement)", "channel": "PT Channel" }
+      ]
+    },
+    {
+      "id": "elbows",
+      "title": "Elbows",
+      "intro": "Elbow pain (often \"tennis elbow\" or \"golfer's elbow\") usually comes from repetitive gripping or wrist motion, not the elbow joint itself.",
+      "causes": [
+        "Repetitive gripping (tools, racquet sports, typing/mousing)",
+        "Sudden increase in activity involving the forearm",
+        "Weak forearm/wrist muscles"
+      ],
+      "videos": [
+        { "id": "QGML1el0VOo", "title": "TOP 6 Elbow Pain Relief Exercises & Stretches (Tennis Elbow)", "channel": "PT Time with Tim" },
+        { "id": "BXAzcjxIHMg", "title": "10 Best Tennis Elbow Exercises & Stretches", "channel": "AskDoctorJo" }
+      ]
+    },
+    {
+      "id": "wrists",
+      "title": "Wrists & Forearms",
+      "intro": "Wrist and forearm tightness is common with typing, mousing, and phone use, and can contribute to elbow pain over time.",
+      "causes": [
+        "Prolonged typing/mousing without breaks",
+        "Phone scrolling and gripping",
+        "Repetitive gripping activities or sports"
+      ],
+      "videos": [
+        { "id": "ko5Kbb2PTEs", "title": "BEST Wrist Forearm Stretches to Release Tightness and Pain", "channel": "PT Channel" },
+        { "id": "bWgNLBtP3Mc", "title": "Wrist and Forearm Stretches for Stiffness Follow Along", "channel": "PT Channel" }
+      ]
+    },
+    {
+      "id": "abs",
+      "title": "Abs (Rectus Abdominis)",
+      "intro": "The rectus abdominis runs down the front of the abdomen and can get tight from heavy ab training or achy from long stretches of sitting hunched forward.",
+      "causes": [
+        "Overtraining abs without stretching afterward",
+        "Prolonged sitting hunched forward",
+        "Poor core endurance relative to other muscle groups",
+        "Sit-up/crunch-heavy workouts"
+      ],
+      "videos": [
+        { "id": "-qrFxGklm7Q", "title": "Rectus Abdominis Stretch", "channel": "PT Channel" },
+        { "id": "D1tzvP8dGR4", "title": "Ab Stretches", "channel": "AskDoctorJo" }
+      ]
+    },
+    {
+      "id": "obliques",
+      "title": "Obliques",
+      "intro": "The obliques run along the sides of the abdomen and handle twisting and side-bending — they're prone to strain from sudden rotational movement.",
+      "causes": [
+        "Rotational sports (golf, tennis, baseball, hockey)",
+        "A sudden or awkward twisting movement",
+        "Weak core stability",
+        "Side-bent sitting posture"
+      ],
+      "videos": [
+        { "id": "BcHQwt9nNLM", "title": "Internal & External Oblique Muscle Stretch", "channel": "PT Channel" },
+        { "id": "D-RW-8lqtnw", "title": "Abs and Oblique Stretch (Tight Abs Fix!)", "channel": "Tone and Tighten" }
+      ]
+    },
+    {
+      "id": "serratus-anterior",
+      "title": "Serratus Anterior",
+      "intro": "This \"fingers on the ribs\" muscle under the armpit stabilizes the shoulder blade — when it's weak or tight, overhead movement and posture both suffer.",
+      "causes": [
+        "Poor shoulder blade (scapular) control",
+        "Repetitive overhead reaching or pressing",
+        "Weak shoulder stabilizers relative to bigger pressing muscles",
+        "Rounded-shoulder posture"
+      ],
+      "videos": [
+        { "id": "RtgjuKiP6j4", "title": "How to Stretch the Serratus Anterior", "channel": "PT Channel" },
+        { "id": "NjFTfr0FJJE", "title": "8 Best Exercises for Serratus Anterior (Shoulder and Scapular Strength)", "channel": "E3 Rehab" }
+      ]
+    },
+    {
+      "id": "biceps",
+      "title": "Biceps",
+      "intro": "The biceps run along the front of the upper arm and cross both the elbow and shoulder, so tightness here can show up as elbow or shoulder discomfort too.",
+      "causes": [
+        "Repetitive lifting or curling motion",
+        "Carrying heavy bags with a bent elbow",
+        "Overuse from climbing, throwing, or rowing sports",
+        "Tendonitis from repetitive strain"
+      ],
+      "videos": [
+        { "id": "jgX7pZ9e0S4", "title": "The Best Stretch for Tight Biceps", "channel": "Doctor Teaches" },
+        { "id": "M9-yNm0NpVc", "title": "Biceps Tendonitis Stretches & Exercises", "channel": "AskDoctorJo" }
+      ]
+    },
+    {
+      "id": "traps",
+      "title": "Trapezius",
+      "intro": "The trapezius spans the back of the neck and upper back, and is where most people physically feel stress — it's usually the first thing to tense up.",
+      "causes": [
+        "Stress, which concentrates tension in the upper traps",
+        "Hunched desk posture",
+        "Carrying a heavy bag or backpack on one shoulder",
+        "Sleeping without proper neck support"
+      ],
+      "videos": [
+        { "id": "-r0eoFS7_5Q", "title": "Upper Trapezius Stretch", "channel": "AskDoctorJo" },
+        { "id": "7hKHOJbJ8_k", "title": "How to Relieve Upper Trapezius Pain FAST (Try This First!)", "channel": "Tone and Tighten" }
+      ]
+    },
+    {
+      "id": "lats",
+      "title": "Latissimus Dorsi",
+      "intro": "The lats are the broad muscles spanning the sides of the mid-back — tightness here can limit overhead reach and contribute to shoulder impingement.",
+      "causes": [
+        "Overhead pulling sports (swimming, climbing, rowing)",
+        "Rounded-shoulder posture limiting shoulder extension",
+        "Prolonged sitting",
+        "Tight lats altering shoulder mechanics"
+      ],
+      "videos": [
+        { "id": "RDnDU4cbRjU", "title": "How to Stretch the Latissimus Dorsi (Tight Lats) - Best 3 Lat Stretches", "channel": "Tone and Tighten" },
+        { "id": "x1SdnOkQoo0", "title": "Lat Stretches & Exercises (Latissimus Dorsi)", "channel": "AskDoctorJo" }
+      ]
+    },
+    {
+      "id": "adductors",
+      "title": "Adductors (Inner Thigh)",
+      "intro": "The adductors run along the inner thigh and pull the leg inward — they're a common site for strains ('groin pulls') in sports with quick lateral movement.",
+      "causes": [
+        "Sudden lateral movement or direction changes (soccer, hockey, basketball)",
+        "Inadequate warm-up before sprinting or kicking",
+        "Muscle imbalance between adductors and abductors",
+        "Previous groin strain that healed short and tight"
+      ],
+      "videos": [
+        { "id": "SG_Bmzf3nt4", "title": "Stretches & Exercises for Groin Pulls (Adductor Strain)", "channel": "Airrosti" },
+        { "id": "qTnxdMXhXNs", "title": "4 Groin Pain Exercises (Adductor Muscle Strains and Tendinopathy)", "channel": "PT Channel" }
+      ]
+    },
+    {
+      "id": "triceps",
+      "title": "Triceps",
+      "intro": "The triceps run along the back of the upper arm and straighten the elbow — overuse from pressing movements is the most common source of tightness.",
+      "causes": [
+        "Repetitive pushing/pressing motion",
+        "Overuse from triceps-focused training",
+        "Leaning on elbows for long periods",
+        "Overhead throwing or serving in sports"
+      ],
+      "videos": [
+        { "id": "yAvpW_zKJmI", "title": "How to Stretch Your Triceps (and How Not To!)", "channel": "PT Channel" },
+        { "id": "BglqDh5Xozc", "title": "Triceps Tendonitis Treatment Stretches & Exercises", "channel": "AskDoctorJo" }
+      ]
+    }
+  ]
+}

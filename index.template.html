@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Painpoint</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230a0a0c'/%3E%3Crect x='13' y='4' width='6' height='24' fill='%23ff3d1a'/%3E%3Crect x='4' y='13' width='24' height='6' fill='%23ff3d1a'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <a class="wordmark" href="index.html">PAINPOINT</a>
+  <div class="topbar-stats mono">
+    <span><strong>{{MUSCLE_COUNT}}</strong> muscle groups</span>
+    <span><strong>{{VIDEO_COUNT}}</strong> curated videos</span>
+  </div>
+</header>
+
+<section class="intro-strip">
+  <h1 class="display">Point to<br><em>what's sore.</em></h1>
+  <p class="lede">Tap the diagram. Get two real physical-therapy videos for that muscle. Nothing else in the way.</p>
+
+  <div class="stat-row">
+    <div>
+      <span class="stat-num display">{{MUSCLE_COUNT}}</span>
+      <span class="stat-label">Muscle groups</span>
+    </div>
+    <div>
+      <span class="stat-num display">{{VIDEO_COUNT}}</span>
+      <span class="stat-label">Curated videos</span>
+    </div>
+  </div>
+
+  <div class="intro-controls-row">
+    <div class="view-switch">
+      <input type="radio" name="view" id="view-front-radio" checked>
+      <label for="view-front-radio">Front</label>
+      <input type="radio" name="view" id="view-back-radio">
+      <label for="view-back-radio">Back</label>
+    </div>
+
+    <details class="browse-all">
+      <summary>Or find a muscle by name</summary>
+      <nav aria-label="All muscles">
+        <ul>
+{{FALLBACK_GRID}}
+        </ul>
+      </nav>
+    </details>
+  </div>
+</section>
+
+<div class="diagonal-divider diagonal-divider--down" aria-hidden="true"></div>
+
+<section class="stage">
+  <div class="tooltip" id="tooltip" aria-live="polite">&nbsp;</div>
+
+  <div class="diagram-views">
+    <div class="diagram-view">
+{{FRONT_SVG}}
+      <span class="view-label">Front</span>
+    </div>
+    <div class="diagram-view">
+{{BACK_SVG}}
+      <span class="view-label">Back</span>
+    </div>
+  </div>
+
+  <p class="hint">Tab and Enter also work.</p>
+</section>
+
+<footer class="disclaimer">
+  <p>
+    This site links to third-party YouTube videos for general education only and is not medical advice.
+    If you have severe, worsening, or persistent pain, numbness, or an injury, see a licensed physical
+    therapist or doctor instead of relying on these videos.
+  </p>
+  <p class="credit">
+    Body diagram adapted from
+    <a href="https://github.com/HichamELBSI/react-native-body-highlighter" target="_blank" rel="noopener">react-native-body-highlighter</a>
+    by Hicham El Abbassi, MIT License (<a href="vendor/LICENSE">vendor/LICENSE</a>).
+  </p>
+</footer>
+
+<script>
+  // Progressive enhancement only — every link above already works without
+  // this script. This just adds the hover/focus tooltip label.
+  const tooltip = document.getElementById('tooltip');
+
+  document.querySelectorAll('.muscle-link').forEach(el => {
+    const label = el.getAttribute('aria-label');
+    const show = () => { tooltip.textContent = label; };
+    const hide = () => { tooltip.textContent = ''; };
+    el.addEventListener('mouseenter', show);
+    el.addEventListener('mouseleave', hide);
+    el.addEventListener('focus', show);
+    el.addEventListener('blur', hide);
+  });
+
+  document.querySelectorAll('.view-switch input').forEach(el => {
+    el.addEventListener('change', () => { tooltip.textContent = ''; });
+  });
+</script>
+
+</body>
+</html>
