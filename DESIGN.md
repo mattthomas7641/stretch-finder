@@ -1,4 +1,4 @@
-# Design System — Painpoint
+# Design System — Stretch Finder
 
 <!-- Replaces the earlier Starbucks-inspired extraction. That direction
      (warm cream, green, consumer-retail) was tried and rejected as feeling

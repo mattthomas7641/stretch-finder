@@ -1,4 +1,4 @@
-# Painpoint
+# Stretch Finder
 
 A small public website: click a muscle on a real anatomical front/back body
 diagram, land on a page with a couple of curated stretch / physical-therapy
@@ -108,7 +108,7 @@ Pages**:
 ```bash
 git init
 git add .
-git commit -m "Initial Painpoint site"
+git commit -m "Initial Stretch Finder site"
 git branch -M main
 git remote add origin <your-repo-url>
 git push -u origin main

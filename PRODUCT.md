@@ -38,7 +38,7 @@ Visitor is often looking this up in the moment — mid-workout cooldown, desk-po
 
 ## Brand Commitments
 
-Named **Painpoint**. No logo beyond the wordmark; visual identity established during the redesign (see DESIGN.md).
+Named **Stretch Finder**. No logo beyond the wordmark; visual identity established during the redesign (see DESIGN.md).
 
 ## Evidence on Hand
 
