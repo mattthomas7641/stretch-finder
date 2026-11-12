@@ -1,5 +1,7 @@
 # Stretch Finder
 
+**Live site:** https://mattthomas7641.github.io/stretch-finder/
+
 A small public website: click a muscle on a real anatomical front/back body
 diagram, land on a page with a couple of curated stretch / physical-therapy
 YouTube videos for that muscle. See `PRODUCT.md` for the product brief and
