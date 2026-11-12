@@ -55,7 +55,7 @@ data/regions.json        Content for every page (title, intro, causes, videos)
 data/path-bboxes.json    Measured bounding box of each muscle path, used to size tap targets
 style.css                Shared styles
 vendor/                  Anatomical muscle path data (MIT licensed, see Credits)
-docs/                    PRODUCT.md, DESIGN.md, screenshots
+docs/                    Screenshots
 ```
 
 `data/path-bboxes.json` was generated once by loading every path into a browser and reading its `getBBox()`, because
